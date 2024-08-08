@@ -1,5 +1,5 @@
 const mongoose = require('mongoose');
-const PendingOrder = require('../models/pendingOrder');
+const PendingOrder = require('../models/PendingOrder');
 const CompletedOrder = require('../models/CompletedOrder');
 
 const matchOrders = async (buyerQty, buyerPrice, sellerPrice, sellerQty) => {
