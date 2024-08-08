@@ -1,4 +1,3 @@
-// models/CompletedOrder.js
 const mongoose = require('mongoose');
 
 const completedOrderSchema = new mongoose.Schema({

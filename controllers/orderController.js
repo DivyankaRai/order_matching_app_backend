@@ -1,5 +1,5 @@
 const { matchOrders } = require('../middleware/orderMatching');
-const PendingOrder = require('../models/pendingOrder');
+const PendingOrder = require('../models/PendingOrder');
 const CompletedOrder = require('../models/CompletedOrder');
 
 exports.createOrder = async (req, res) => {
