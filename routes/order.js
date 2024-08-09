@@ -1,14 +1,17 @@
 const express = require('express');
-const {
-  createOrder,
-  getPendingOrders,
-  getCompletedOrders,
-} = require('../controllers/orderController');
-
 const router = express.Router();
+const orderController = require('../controllers/orderController');
 
-router.post('/orders', createOrder);
-router.get('/orders', getPendingOrders);
-router.get('/completed-orders', getCompletedOrders);
+// Routes for buyer orders
+router.post('/buyer-order', orderController.createBuyerOrder);
+router.get('/pending-buyer-orders', orderController.getPendingBuyerOrders);
+
+// Routes for seller orders
+router.post('/seller-order', orderController.createSellerOrder);
+router.get('/pending-seller-orders', orderController.getPendingSellerOrders);
+
+// Route for completed orders
+router.get('/completed-orders', orderController.getCompletedOrders);
 
 module.exports = router;
+
